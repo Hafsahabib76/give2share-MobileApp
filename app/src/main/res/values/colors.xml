@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //for background screen color
+    <color name="colorBackground">#ECECEC</color>
+
+    <color name="colorTextView">#372c24</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="grey">#CCCCCC</color>
+
+    //for stepper/progress bar
+    <color name="lightgrey">#D3D3D3</color>
+
+    <color name="colorDarkBase">#143601</color>
+    <color name="colorPrimary">#1A4301</color>
+    <color name="colorPrimaryDark">#245501</color>
+    <color name="colorAccent">#538D22</color>
+    <color name="colorGreen">#73A942</color>
+    <color name="colorLightGreen">#AAD576</color>
+    <color name="colorLightGrey">#C7C7C7</color>
+    <color name="colorGrey">#949494</color>
+</resources>

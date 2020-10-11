@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Give2Share Application</string>
+    <string name="donate_call">Donate Via \n You Call We Collect</string>
+
+
+    <string name="RegisterationExplanation">
+        <b>If you will Register as a DONOR you can:\n\n</b>
+
+        •\t	Post Items for donation\n\n
+        •\t	Donate Money\n\n
+        •\t	View/Update the Posted Items\n\n
+        •\t View donated item status\n\n
+        •\t	View the previous donations reports\n\n
+        •\t	View Notifications\n\n
+
+        <b>If you will Register as a REQUESTOR you can:\n\n</b>
+
+        •\t	Search Items according to your specific need\n\n
+        •\t	Send request for the items\n\n
+        •\t	Send Request for the money\n\n
+        •\t	Complete Profile to get the requested item\n\n
+        •\t	View Request Status\n\n
+        •\t	View Notifications\n
+    </string>
+
+</resources>
