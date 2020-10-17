@@ -147,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.apply();
 
                     //if success
-                    startActivity(new Intent(ctx , LoginActivity.class));
+                    startActivity(new Intent(ctx , DonorHomeActivity.class));
                     finish();
                     Toast.makeText(LoginActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                 }

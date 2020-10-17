@@ -269,14 +269,19 @@ public class RegisterActivity extends AppCompatActivity {
                     //make shared preference user
                     SharedPreferences userPref = ctx.getApplicationContext().getSharedPreferences("user", ctx.MODE_PRIVATE);
                     SharedPreferences.Editor editor = userPref.edit();
+                    editor.putString("token", object.getString("token"));
                     editor.putBoolean("isLoggedIn",true);
                     editor.apply();
 
                     //if success
-                    startActivity(new Intent(ctx ,DonorHomeActivity.class));
+                    startActivity(new Intent(ctx ,LoginActivity.class));
                     finish();
                     Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_LONG).show();
+                }
 
+            }catch (JSONException e){
+                e.printStackTrace();
+            }
             dialog.dismiss();
 
         }, error -> {
