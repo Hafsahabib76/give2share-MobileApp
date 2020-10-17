@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Base64;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.se17.give2shareapplication.Activities.Donor.DonorHomeActivity;
 import com.se17.give2shareapplication.Constant;
 import com.se17.give2shareapplication.R;
 
@@ -38,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private ProgressDialog dialog;
 
+    // login api url
+    private static String url_login = "https://webomizer.com/givetoshare/api/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
     private void login() {
         dialog.setMessage("Logging in");
         dialog.show();
-        StringRequest request = new StringRequest(Request.Method.POST, Constant.LOGIN, response -> {
+        StringRequest request = new StringRequest(Request.Method.POST, Constant.URL_LOGIN, response -> {
             //we get response if connection success
             try {
                 JSONObject object = new JSONObject(response);
@@ -136,14 +140,16 @@ public class LoginActivity extends AppCompatActivity {
                     JSONObject user = object.getJSONObject("user");
 
                     //make shared preference user
-                    SharedPreferences userPref = getApplicationContext().getSharedPreferences("user", ctx.MODE_PRIVATE);
+                    SharedPreferences userPref = ctx.getApplicationContext().getSharedPreferences("user", ctx.MODE_PRIVATE);
                     SharedPreferences.Editor editor = userPref.edit();
                     editor.putString("token", object.getString("token"));
-                    editor.putString("fullname", user.getString("fullname"));
+                    editor.putBoolean("isLoggedIn",true);
                     editor.apply();
 
                     //if success
-                    Toast.makeText(ctx, "Login Success", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(ctx , LoginActivity.class));
+                    finish();
+                    Toast.makeText(LoginActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                 }
 
             }catch (JSONException e){
@@ -158,8 +164,15 @@ public class LoginActivity extends AppCompatActivity {
 
         }) {
 
-            //add parameters
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("Content-Type","application/json");
+                return params;
+            }
 
+            @Override
+            //add parameters
             protected Map<String, String> getParams() throws AuthFailureError {
                 HashMap<String, String> map = new HashMap<>();
                 map.put("email", txtEmail.getText().toString().trim());

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else  {
             //start Auth (Login/Signup) Activity
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(MainActivity.this, Main2Activity.class));
             finish();
         }
     }

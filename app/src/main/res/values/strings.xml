@@ -22,5 +22,22 @@
         •\t	View Request Status\n\n
         •\t	View Notifications\n
     </string>
+    <string name="call_collect">Give2Share \" You Call We Collect \" service makes it easy for you to donate your unwanted goods.
+        Give those old books, clothes, household items etc. that is getting dusted at some corner of your house a new life.
+        Schedule a donation pickup today and we will collect your donations from your location and help us spread happiness :)
+        \n\n
+        <b>Call us at:\n\n</b>
+        +92-21-111-11-1111\n\n
+        +92-21-222-222-222\n\n
+    </string>
+
+    <string name="DonateEasypaisa_text">
+        Send your donations to Give2Share through <b>easypaisa donation portal</b>,
+        your easypaisa mobile account or from any of the <b>70,000+ easypaisa</b> shops nationwide.
+    </string>
+
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
 
 </resources>

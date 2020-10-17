@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/finalbg"
-    tools:context=".Activities.Donor.DonorHomeActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:background="@drawable/finalbg"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Donor.DonorHomeActivity">
 
         <LinearLayout
             android:id="@+id/title_view"
@@ -17,7 +19,7 @@
             android:layout_height="250dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/background_header">
+            android:background="@mipmap/background_header">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,12 +55,13 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:layout_below="@+id/title_view"
                 android:columnCount="2"
                 android:rowCount="2">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/donate_money"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_row="0"
@@ -95,6 +98,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/donate_item"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_row="0"
@@ -131,6 +135,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/donate_easypaisa"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_row="1"
@@ -167,6 +172,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/donate_callCollect"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_row="1"
@@ -206,6 +212,5 @@
 
         </LinearLayout>
 
-    </ScrollView>
-
 </RelativeLayout>
+</ScrollView>
