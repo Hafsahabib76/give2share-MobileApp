@@ -5,23 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/finalbg"
-    tools:context=".Authentication.RegisterActivity">
+    android:fillViewport="true"
+    tools:context=".Activities.Authentication.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:layout_marginTop="20dp">
-
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp">
 
         <ImageView
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="50dp"
             android:src="@mipmap/without_tagline" />
 
@@ -107,7 +107,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/LayoutAddressRegister"
             android:layout_width="match_parent"
@@ -161,7 +160,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/btn_round"
         android:text="Register"
         android:textAllCaps="false"
@@ -173,7 +172,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="45dp">
 
             <TextView
                 android:layout_width="wrap_content"

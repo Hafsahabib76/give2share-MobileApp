@@ -1,4 +1,4 @@
-package com.se17.give2shareapplication;
+package com.se17.give2shareapplication.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.se17.give2shareapplication.Activities.OnBoardActivity;
-import com.se17.give2shareapplication.Authentication.LoginActivity;
+import com.se17.give2shareapplication.Activities.Donor.DonorHomeActivity;
+import com.se17.give2shareapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,13 +18,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //this code will pause the app for 1.5 secs and then any thing in run method will run.
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                isFirstTime();
+
+                SharedPreferences userPref = getApplicationContext().getSharedPreferences("user",Context.MODE_PRIVATE);
+                boolean isLoggedIn = userPref.getBoolean("isLoggedIn",false);
+
+                if (isLoggedIn){
+                    startActivity(new Intent(MainActivity.this, DonorHomeActivity.class));
+                    finish();
+                }
+
+                else {
+                    isFirstTime();
+                }
             }
-        }, 1500);
+        },1500);
     }
 
     private void isFirstTime(){

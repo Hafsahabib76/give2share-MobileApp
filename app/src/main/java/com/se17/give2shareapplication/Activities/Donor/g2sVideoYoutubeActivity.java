@@ -1,9 +1,11 @@
-package com.se17.give2shareapplication;
+package com.se17.give2shareapplication.Activities.Donor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.webkit.WebView;
+
+import com.se17.give2shareapplication.R;
 
 public class g2sVideoYoutubeActivity extends AppCompatActivity {
 

@@ -11,9 +11,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.se17.give2shareapplication.Activities.Authentication.RegisterActivity;
 import com.se17.give2shareapplication.Adapters.ViewPagerAdapter;
-import com.se17.give2shareapplication.Authentication.LoginActivity;
-import com.se17.give2shareapplication.Authentication.RegisterActivity;
 import com.se17.give2shareapplication.R;
 
 public class OnBoardActivity extends AppCompatActivity {
@@ -49,7 +48,7 @@ public class OnBoardActivity extends AppCompatActivity {
             }
             else {
                 //after finish redirect to page Register activity
-                startActivity(new Intent(OnBoardActivity.this, RegisterActivity.class));
+                startActivity(new Intent(OnBoardActivity.this, Main2Activity.class));
                 finish();
             }
         });
