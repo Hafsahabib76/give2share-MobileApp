@@ -7,8 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.se17.give2shareapplication.Activities.Donor.DonorHomeActivity;
-import com.se17.give2shareapplication.Authentication.RegisterActivity;
+import com.se17.give2shareapplication.Activities.Authentication.RegisterActivity;
 import com.se17.give2shareapplication.R;
 
 public class RegisterTypeActivity extends AppCompatActivity {

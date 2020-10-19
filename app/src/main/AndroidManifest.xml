@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,17 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.Donor.DonateEasypaisaActivity"></activity>
-        <activity android:name=".Activities.WelcomeActivity" />
+        <activity android:name=".Activities.Donor.DonorProfileActivity"></activity>
+        <activity android:name=".Activities.Donor.DonateEasypaisaActivity" />
         <activity android:name=".Activities.Donor.CallCollectActivity" />
-        <activity android:name=".g2sVideoYoutubeActivity" />
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".Activities.Donor.g2sVideoYoutubeActivity" />
+        <activity android:name=".Activities.Main2Activity" />
         <activity android:name=".Activities.Donor.DonorHomeActivity" />
         <activity android:name=".Activities.RegisterTypeActivity" />
-        <activity android:name=".Authentication.RegisterActivity" />
+        <activity android:name=".Activities.Authentication.RegisterActivity" />
         <activity android:name=".Activities.OnBoardActivity" />
-        <activity android:name=".Authentication.LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.Authentication.LoginActivity" />
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
