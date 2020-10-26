@@ -39,5 +39,22 @@
     <string name="welcome">Welcome</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="name">Fullname</string>
+    <string name="auth_failed">The email address and password combination you entered cannot be recognized or does not exist. Please try again.</string>
+
+    <string-array name="category">
+        <item>--Select Category--</item>
+        <item>Bags</item>
+        <item>Clothes</item>
+        <item>Food</item>
+        <item>Books</item>
+        <item>Computer Accessories</item>
+        <item>Furniture</item>
+        <item>Electronic Appliances</item>
+        <item>Accessories</item>
+        <item>Shoes</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

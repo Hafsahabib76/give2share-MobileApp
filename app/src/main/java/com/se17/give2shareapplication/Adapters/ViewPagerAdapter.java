@@ -27,14 +27,14 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     private int bgimages[] = {
             R.drawable.green,
-            R.drawable.blue,
-            R.drawable.purple
+            R.drawable.green,
+            R.drawable.green
     };
 
     private int images[] = {
-            R.drawable.donate,
-            R.drawable.share,
-            R.drawable.request
+            R.mipmap.donate,
+            R.mipmap.share,
+            R.mipmap.request
     };
 
     private String titles[] = {

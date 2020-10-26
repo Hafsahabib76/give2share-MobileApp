@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".Activities.Donor.SingleSharingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/singleImage"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:id="@+id/singleTitle"
+        android:layout_marginBottom="5dp"
+        android:text="Title"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="5dp"
+            android:text="Category: "
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:id="@+id/singleCategory"
+            android:layout_marginBottom="5dp"
+            android:text="Category"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="5dp"
+            android:text="Condition: "
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:id="@+id/singleCondition"
+            android:layout_marginBottom="5dp"
+            android:text="Condition"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/secondary_text_light"
+        android:id="@+id/singleDesc"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Description"
+        android:textSize="18sp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginBottom="5dp"
+            android:text="Available Quantity: "
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:id="@+id/singleQuantity"
+            android:layout_marginBottom="5dp"
+            android:text="Quantity"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/requestBtn"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Request Now"
+        android:background="@drawable/btn_round"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

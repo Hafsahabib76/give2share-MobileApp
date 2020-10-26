@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".Activities.Donor.DonateItemStep1Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbarProfile"
+        android:elevation="1dp"
+        app:title="Share Item"
+        app:titleTextColor="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/AppTheme.BottomAppbar"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorTextView"
+                android:text="Select clear image for sharing the item" />
+
+            <Button
+                android:id="@+id/SelectImageBtn"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="Select Image"
+                android:background="@drawable/outline_btn"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="18dip"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/donateitemImg"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dip"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Title"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="What are you sharing?"
+                android:inputType="text"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:background="@drawable/btn_round"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <com.kofigyan.stateprogressbar.StateProgressBar
+                android:id="@+id/your_state_progress_bar_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:spb_animateToCurrentProgressState="false"
+                app:spb_checkStateCompleted="true"
+                app:spb_currentStateDescriptionColor="@color/colorAccent"
+                app:spb_currentStateNumber="one"
+                app:spb_maxStateNumber="two"
+                app:spb_stateBackgroundColor="#B2B2B2"
+                app:spb_stateDescriptionColor="#808080"
+                app:spb_stateForegroundColor="@color/colorAccent"
+                app:spb_stateNumberBackgroundColor="#ffffff"
+                app:spb_stateNumberForegroundColor="#ffffff" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
