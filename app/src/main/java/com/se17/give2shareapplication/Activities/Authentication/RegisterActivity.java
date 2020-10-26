@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressDialog dialog;
 
     private ApiInterface apiInterface;
-    private String tag = "bff";
+    private String tag = "g2s";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -264,6 +264,12 @@ public class RegisterActivity extends AppCompatActivity {
             return false;
         }
 
+        if (txtAddress.getText().toString().isEmpty()) {
+            layoutAddress.setErrorEnabled(true);
+            layoutAddress.setError("Address is required");
+            return false;
+        }
+
         if(txtPassword.getText().toString().length()<8){
             layoutPassword.setErrorEnabled(true);
             layoutPassword.setError("Atleast 8 Characters Required");
@@ -281,10 +287,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void getRegister(){
         dialog.setMessage("Registering...");
+        dialog.setMessage("Registering");
         dialog.show();
 
         Map<String,String> fields = new HashMap<String, String>();
-
         String role = txtRole.getText().toString().trim();
         String name = txtName.getText().toString().trim();
         String email = txtEmail.getText().toString().trim();

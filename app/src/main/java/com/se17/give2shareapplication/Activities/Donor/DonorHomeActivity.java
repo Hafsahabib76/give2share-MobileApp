@@ -13,7 +13,9 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.se17.give2shareapplication.R;
+
 import com.se17.give2shareapplication.testActivity;
+
 
 public class DonorHomeActivity extends AppCompatActivity {
 
@@ -60,7 +62,6 @@ public class DonorHomeActivity extends AppCompatActivity {
         donateEasypaisa.setOnClickListener(v->{
             startActivity(new Intent(ctx, DonateEasypaisaActivity.class));
         });
-
 
         //for Bottom navigation code
         bottomNavigationView = findViewById(R.id.bottom_nav);

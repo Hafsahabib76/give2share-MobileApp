@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
         <activity android:name=".Activities.Donor.SingleSharingActivity"></activity>
         <activity android:name=".testActivity" />
         <activity android:name=".Activities.Donor.DonateItemStep2Activity" />
@@ -20,6 +21,7 @@
             android:name=".Activities.Donor.DonateItemStep1Activity"
             android:parentActivityName=".Activities.Donor.DonorHomeActivity" />
         <activity android:name=".Activities.Donor.DonorProfileActivity" />
+        <activity android:name=".Activities.Donor.DonorProfileActivity"></activity>
         <activity android:name=".Activities.Donor.DonateEasypaisaActivity" />
         <activity android:name=".Activities.Donor.CallCollectActivity" />
         <activity android:name=".Activities.Donor.g2sVideoYoutubeActivity" />

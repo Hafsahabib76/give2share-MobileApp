@@ -128,6 +128,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void getLogin(){
+
         dialog.setMessage("Logging in...");
         dialog.show();
 
