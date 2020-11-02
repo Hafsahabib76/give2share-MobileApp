@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Requestor.RequestorRegistrationStep2Activity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/finalbg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/linerlayour_borderline_bottom"
+        >
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/your_state_progress_bar_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="two"
+            app:spb_maxStateNumber="three"
+            app:spb_stateBackgroundColor="#B2B2B2"
+            app:spb_stateForegroundColor="@color/colorAccent"
+            app:spb_stateNumberBackgroundColor="#ffffff"
+            app:spb_stateNumberForegroundColor="#ffffff"
+            app:spb_currentStateDescriptionColor="@color/colorAccent"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_animateToCurrentProgressState="false"
+            app:spb_checkStateCompleted="true"/>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dip">
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/myTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Family Details"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Please add family details to complete your profile." />
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Total Number of Family Members"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:id="@+id/familymembersSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_marginBottom="20dip"
+                        android:background="@drawable/spinner_border"
+                        android:entries="@array/familymembers"
+                        android:singleLine="true"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Number of Family Members Employed"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:id="@+id/employmembersSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_marginBottom="20dip"
+                        android:background="@drawable/spinner_border"
+                        android:entries="@array/Number"
+                        android:singleLine="true"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Number of Family Members Not Employed"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:id="@+id/unemploymembersSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_marginBottom="20dip"
+                        android:background="@drawable/spinner_border"
+                        android:entries="@array/Number"
+                        android:singleLine="true"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Number of Family Members Going to School /
+                        College / University"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:id="@+id/studentsmembersSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_marginBottom="20dip"
+                        android:background="@drawable/spinner_border"
+                        android:entries="@array/Number"
+                        android:singleLine="true"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Parent Current Martial Status"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:id="@+id/MartialStatusSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_marginBottom="20dip"
+                        android:background="@drawable/spinner_border"
+                        android:entries="@array/MartialStatus"
+                        android:singleLine="true"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Current Residence Type"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <RadioGroup
+                        android:id="@+id/residenceType_radio_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dip"
+                        android:layout_marginBottom="20dip">
+
+                        <RadioButton
+                            android:id="@+id/rent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Rented" />
+
+                        <RadioButton
+                            android:id="@+id/own"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Owned" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="Residence Type"
+                        android:textColor="#372c24"
+                        android:textSize="16sp" />
+                    <RadioGroup
+                        android:id="@+id/residence_radio_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dip"
+                        android:layout_marginBottom="75dip">
+
+                        <RadioButton
+                            android:id="@+id/apartment"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Apartment" />
+
+                        <RadioButton
+                            android:id="@+id/townhouse"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Town House" />
+
+                        <RadioButton
+                            android:id="@+id/bungalow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Bungalow" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lyt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="#666666"
+                    android:src="@drawable/ic_chevron_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="back"
+                    android:textSize="18dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="#666666"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/lyt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:textSize="18dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="#666666"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="#666666"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron_left" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Give2Share Application</string>
+    <string name="app_name">Give2Share</string>
     <string name="donate_call">Donate Via \n You Call We Collect</string>
 
 
@@ -39,5 +39,157 @@
     <string name="welcome">Welcome</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="name">Fullname</string>
+    <string name="auth_failed">The email address and password combination you entered cannot be recognized or does not exist. Please try again.</string>
 
+    <string-array name="category">
+        <item>--Select Category--</item>
+        <item>Bags</item>
+        <item>Clothes</item>
+        <item>Food</item>
+        <item>Books</item>
+        <item>Computer Accessories</item>
+        <item>Furniture</item>
+        <item>Electronic Appliances</item>
+        <item>Accessories</item>
+        <item>Shoes</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>--Select Gender--</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="familymembers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="Number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="MartialStatus">
+        <item>Married</item>
+        <item>Divorced/Seperated</item>
+        <item>Mother Living/Father Deceased</item>
+        <item>Father Living/Mother Deceased</item>
+        <item>Both Deceased</item>
+    </string-array>
+
+    <string-array name="usertype">
+        <item></item>
+        <item>School Student</item>
+        <item>College Student</item>
+        <item>University Student</item>
+        <item>Male Employee</item>
+        <item>Female Employee</item>
+        <item>Unemployed Worker</item>
+        <item>Daily Wage Worker</item>
+        <item>Retired</item>
+    </string-array>
+
+    <string-array name="source_of_income">
+        <item>Rent</item>
+        <item>Financial Support</item>
+        <item>Family Income</item>
+    </string-array>
+
+    <string-array name="father_job_position">
+        <item>Employed</item>
+        <item>Unemployed</item>
+        <item>Retired</item>
+    </string-array>
+
+
+    <string name="waiting_post">Waiting for Admin Approval to publish your post. If you haven\'t submit your item Please submit your item to the nearest Give2Share
+    Center or avail a \" You Call We Collect \" Service</string>
+
+    <string name="confirm_post"> Thank you for your donation. We didn\'t receive any request up till now.
+    Please check again later to view the total request Status or We will inform you through notifications </string>
+
+    <string-array name="donationFor">
+        <item>Rasahan</item>
+        <item>Education</item>
+        <item>Marriage</item>
+        <item>Masjid Construction</item>
+        <item>Flood Victim</item>
+        <item>Corona Effecties</item>
+        <item>Food</item>
+        <item>Zakkat</item>
+        <item>Sadqah</item>
+        <item>Heat Stroke</item>
+    </string-array>
+
+    <string-array name="Paymentinstrument">
+        <item>Payment Card</item>
+    </string-array>
+
+    <string-array name="cardtype">
+        <item>Visa</item>
+        <item>Master Card</item>
+    </string-array>
+
+
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+        <item>2035</item>
+        <item>2036</item>
+        <item>2037</item>
+        <item>2038</item>
+        <item>2039</item>
+        <item>2040</item>
+    </string-array>
 </resources>

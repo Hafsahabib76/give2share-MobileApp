@@ -7,8 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.se17.give2shareapplication.Activities.Donor.DonorHomeActivity;
-import com.se17.give2shareapplication.Authentication.RegisterActivity;
+import com.se17.give2shareapplication.Activities.Authentication.RegisterActivity;
+import com.se17.give2shareapplication.Activities.Requestor.RequestorHomeActivity;
+import com.se17.give2shareapplication.Activities.Requestor.RequestorRegistrationStep1Activity;
 import com.se17.give2shareapplication.R;
 
 public class RegisterTypeActivity extends AppCompatActivity {
@@ -22,8 +23,6 @@ public class RegisterTypeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_type);
 
         init();
-
-
     }
 
     private void init() {
@@ -34,6 +33,13 @@ public class RegisterTypeActivity extends AppCompatActivity {
         donorType.setOnClickListener(v -> {
             startActivity(new Intent(ctx, RegisterActivity.class));
             finish();
+
+        });
+
+        requestorType.setOnClickListener(v -> {
+            startActivity(new Intent(ctx, RequestorRegistrationStep1Activity.class));
+            finish();
+
         });
     }
 }

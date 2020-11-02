@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/green_border">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="110dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/itemTitle"
+            android:layout_below="@+id/itemImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorTextView"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:id="@+id/linearCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemTitle"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condition: "
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+            <TextView
+                android:id="@+id/itemCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/request_btn"
+            android:layout_below="@+id/linearCat"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_round"
+            android:text="Request"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:onClick="request_btn"></Button>
+    </RelativeLayout>
+
+</LinearLayout>

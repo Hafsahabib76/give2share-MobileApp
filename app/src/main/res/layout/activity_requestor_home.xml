@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbg"
+    tools:context=".Activities.Requestor.RequestorHomeActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/imgLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imageNoSharing"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="@mipmap/no_sharings"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <!--Bottom Navigation Bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/requestor_bottom_navigation"
+        android:background="@color/colorPrimary"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@drawable/bottom_navigation_item_colors"
+        app:itemIconTint="@drawable/bottom_navigation_item_colors" />
+
+</RelativeLayout>

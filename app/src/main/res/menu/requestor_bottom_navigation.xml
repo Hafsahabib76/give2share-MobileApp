@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icon"
+        android:title="Home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_give2share"
+        android:icon="@mipmap/give2share_icon"
+        android:title="Give2Share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/notification_icon"
+        android:title="Notification"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/person_icon"
+        android:title="Profile"
+        app:showAsAction="always" />
+
+</menu>

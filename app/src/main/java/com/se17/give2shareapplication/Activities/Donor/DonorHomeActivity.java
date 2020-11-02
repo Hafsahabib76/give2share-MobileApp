@@ -1,5 +1,6 @@
 package com.se17.give2shareapplication.Activities.Donor;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -7,10 +8,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.se17.give2shareapplication.R;
-import com.se17.give2shareapplication.g2sVideoYoutubeActivity;
 
 public class DonorHomeActivity extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class DonorHomeActivity extends AppCompatActivity {
     CardView donateMoney, donateItem, donateEasypaisa, donateCallCollect;
     private ProgressDialog dialog;
 
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +48,46 @@ public class DonorHomeActivity extends AppCompatActivity {
             dialog.dismiss();
         });
 
+        donateMoney.setOnClickListener(v->{
+            startActivity(new Intent(ctx,
+                    DonorDonateMoneyActivity.class));
+        });
+
+        donateItem.setOnClickListener(v->{
+            startActivity(new Intent(ctx,
+                    DonateItemStep1Activity.class));
+        });
+
         donateCallCollect.setOnClickListener(v->{
             startActivity(new Intent(ctx, CallCollectActivity.class));
         });
 
         donateEasypaisa.setOnClickListener(v->{
             startActivity(new Intent(ctx, DonateEasypaisaActivity.class));
+        });
+
+
+        //for Bottom navigation code
+        bottomNavigationView = findViewById(R.id.bottom_nav);
+        //setting home as a selection
+        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+        //Item selection
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+
+                    case R.id.nav_home:
+                        finish();
+                        return true;
+
+                    case R.id.nav_profile:
+                        startActivity(new Intent(ctx, DonorProfileActivity.class));
+                        return true;
+
+                }
+                return false;
+            }
         });
     }
 

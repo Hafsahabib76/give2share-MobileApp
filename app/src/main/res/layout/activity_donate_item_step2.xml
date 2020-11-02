@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".Activities.Donor.DonateItemStep2Activity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Category"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/catgeorySpinner"
+                android:entries="@array/category"
+                android:background="@drawable/spinner_border"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Condition"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/condition_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip">
+
+                <RadioButton
+                    android:id="@+id/Rbtn1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="New" />
+
+                <RadioButton
+                    android:id="@+id/Rbtn2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Old" />
+
+                <RadioButton
+                    android:id="@+id/Rbtn3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Used" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Description"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Description of your item.."
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="15dip"
+                android:text="Quantity"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backGroundColor="@color/colorWhite"
+                app:textColor="@color/colorAccent"
+                app:textSize="7sp"
+                app:initialNumber="0"
+                app:finalNumber="100" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/donateBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Post Donation"
+            android:background="@drawable/btn_round"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <com.kofigyan.stateprogressbar.StateProgressBar
+                android:id="@+id/your_state_progress_bar_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:spb_animateToCurrentProgressState="false"
+                app:spb_checkStateCompleted="true"
+                app:spb_currentStateDescriptionColor="@color/colorAccent"
+                app:spb_currentStateNumber="two"
+                app:spb_maxStateNumber="two"
+                app:spb_stateBackgroundColor="#B2B2B2"
+                app:spb_stateDescriptionColor="#808080"
+                app:spb_stateForegroundColor="@color/colorAccent"
+                app:spb_stateNumberBackgroundColor="#ffffff"
+                app:spb_stateNumberForegroundColor="#ffffff" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

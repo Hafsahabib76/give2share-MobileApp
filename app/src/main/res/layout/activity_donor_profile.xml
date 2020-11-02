@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/finalbg"
+    tools:context=".Activities.Donor.DonorProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbarProfile"
+        android:elevation="1dp"
+        app:title="Give2Share"
+        app:titleTextColor="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/AppTheme.BottomAppbar"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/accountLinearlayout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="05dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@id/toolbarProfile"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/profile_image"
+                android:id="@+id/imgAccountProfile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:text="Account Name"
+                android:textStyle="bold"
+                android:id="@+id/txtAccountName"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:text="0"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/txtAccountSharingCount"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:text="Sharings"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:text="0"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/txtAccountDonationCount"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:text="Donations"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round"
+        android:text="Edit Profile"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:id="@+id/btnEditProfile"
+        android:layout_marginBottom="10dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/accountLinearlayout"
+        />
+
+    <!--Tab layout-->
+
+    <LinearLayout
+        android:id="@+id/tablayoutLinear"
+        android:layout_below="@id/btnEditProfile"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tablayout"
+            android:minHeight="?attr/actionBarSize"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/colorGrey"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/SharingsTab"
+                android:text="Sharings"
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/DonationsTab"
+                android:text="Donations" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pager"
+            android:layout_marginBottom="60dp"/>
+
+    </LinearLayout>
+
+    <!--Bottom Navigation Bar-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/coordinator_view"
+        android:fitsSystemWindows="false"
+        android:clickable="false"
+        android:focusable="false">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_app"
+            android:layout_gravity="bottom"
+            android:clickable="false"
+            app:fabAlignmentMode="center"
+            app:fabCradleRoundedCornerRadius="16dp"
+            android:theme="@style/AppTheme.BottomAppbar"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_nav"
+                android:background="@android:color/transparent"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/donor_bottom_navigation"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/fab"
+            android:backgroundTint="@color/colorAccent"
+            app:rippleColor="@color/colorWhite"
+            android:src="@drawable/ic_add"
+            app:tint="@color/colorWhite"
+            app:layout_anchor="@id/bottom_app"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

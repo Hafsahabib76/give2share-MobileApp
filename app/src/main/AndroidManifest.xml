@@ -3,28 +3,46 @@
     package="com.se17.give2shareapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.Donor.DonateEasypaisaActivity"></activity>
-        <activity android:name=".Activities.WelcomeActivity" />
+        <activity android:name=".Activities.Donor.DonorMoneyPaymentActivity"
+            android:label="Payment" android:parentActivityName=".Activities.Donor.DonorDonateMoneyActivity"></activity>
+        <activity android:name=".Activities.Donor.DonorDonateMoneyActivity" android:label="Donate Money"
+            android:parentActivityName=".Activities.Donor.DonorHomeActivity"/>
+        <activity android:name=".Activities.Requestor.RequestorRegistrationStep3Activity" />
+        <activity android:name=".Activities.Requestor.RequestorRegistrationStep2Activity" />
+        <activity android:name=".Activities.Requestor.RequestorRegistrationStep1Activity" />
+        <activity android:name=".Activities.Donor.RequestStatsActivity" />
+        <activity android:name=".Activities.Requestor.RequestorHomeActivity" />
+        <activity android:name=".Activities.Donor.DonorEditProfileActivity" />
+        <activity android:name=".Activities.Donor.SingleSharingActivity" />
+        <activity android:name=".Activities.Requestor.SingleItemActivity" />
+        <activity android:name=".Activities.Donor.DonateItemStep2Activity" android:label="Describe Item"
+            android:parentActivityName=".Activities.Donor.DonateItemStep1Activity"/>
+        <activity
+            android:name=".Activities.Donor.DonateItemStep1Activity"
+            android:label="Share Item"
+            android:parentActivityName=".Activities.Donor.DonorHomeActivity" />
+        <activity android:name=".Activities.Donor.DonorProfileActivity" />
+        <activity android:name=".Activities.Donor.DonateEasypaisaActivity" />
         <activity android:name=".Activities.Donor.CallCollectActivity" />
-        <activity android:name=".g2sVideoYoutubeActivity" />
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".Activities.Donor.g2sVideoYoutubeActivity" />
+        <activity android:name=".Activities.Main2Activity" />
         <activity android:name=".Activities.Donor.DonorHomeActivity" />
         <activity android:name=".Activities.RegisterTypeActivity" />
-        <activity android:name=".Authentication.RegisterActivity" />
+        <activity android:name=".Activities.Authentication.RegisterActivity" />
         <activity android:name=".Activities.OnBoardActivity" />
-        <activity android:name=".Authentication.LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.Authentication.LoginActivity" />
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

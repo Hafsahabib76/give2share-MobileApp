@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".Activities.Donor.DonorDonateMoneyActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Donation For"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/donationForSpinner"
+                android:entries="@array/donationFor"
+                android:background="@drawable/spinner_border"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Amount (in PKR) "
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Enter Donation Amount"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Full Name"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/donorName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Enter Donor Name"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="Number"
+                android:textColor="@color/colorTextView"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Enter Number"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/donateMoneyBtn"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="100dp"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Donate Now"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_round"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="sans-serif-black"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

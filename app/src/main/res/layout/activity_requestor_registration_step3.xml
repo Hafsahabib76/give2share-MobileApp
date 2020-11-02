@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbg"
+    tools:context=".Activities.Requestor.RequestorRegistrationStep3Activity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/linerlayour_borderline_bottom"
+        >
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/your_state_progress_bar_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="three"
+            app:spb_maxStateNumber="three"
+            app:spb_stateBackgroundColor="#B2B2B2"
+            app:spb_stateForegroundColor="@color/colorAccent"
+            app:spb_stateNumberBackgroundColor="#ffffff"
+            app:spb_stateNumberForegroundColor="#ffffff"
+            app:spb_currentStateDescriptionColor="@color/colorAccent"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_animateToCurrentProgressState="false"
+            app:spb_checkStateCompleted="true"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/myTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="Job Details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Please add details to complete your profile." />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You are a"
+                    android:textColor="#372c24"
+                    android:textSize="16sp" />
+                <Spinner
+                    android:id="@+id/usertypespinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:layout_marginBottom="20dip"
+                    android:background="@drawable/spinner_border"
+                    android:entries="@array/usertype"
+                    android:singleLine="true"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:id="@+id/instituteName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="School / Institute / University Name"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/instituteNameET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:hint="School / Institute / University Name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/FatherJobTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Father Job Status"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+                <Spinner
+                    android:id="@+id/FatherJob_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:layout_marginBottom="65dip"
+                    android:background="@drawable/spinner_border"
+                    android:entries="@array/father_job_position"
+                    android:singleLine="true"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/SourceofIncomeTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Other Source of Income"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+                <Spinner
+                    android:id="@+id/SourceofIncome_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:layout_marginBottom="20dip"
+                    android:background="@drawable/spinner_border"
+                    android:entries="@array/source_of_income"
+                    android:singleLine="true"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/retirementdateTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Retirement date"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+                <DatePicker
+                    android:id="@+id/retirementdatePicker"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/unemployedsinceTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Retirement date"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+                <DatePicker
+                    android:id="@+id/unemployedsincePicker"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/LastCompanyName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Company / Organization Name"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/CompanyName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company / Organization Name"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/CompanyNameET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:hint="Company / Organization Name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/jobtitleTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Job Title / Designation"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/jobtitleET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:hint="e.g: Accountant, Professor"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/monthlyincomeTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Monthly Income"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/monthlyincomeET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:hint="(e.g: 12000)"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/yearlyincomeTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Yearly Income"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/yearlyincomeET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="65dip"
+                    android:hint="(e.g: 150000)"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/LastdrawnSalaryTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Last Drawn Salary"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+                <EditText
+                    android:id="@+id/LastdrawnSalaryET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="65dip"
+                    android:hint="(e.g: 12000)"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/worktypeTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Type of Work"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/worktypeET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:hint="(e.g: Carpenter, Plumber)"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/dailyincomeTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Daily Income"
+                    android:textColor="#372c24"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/dailyincomeET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="65dip"
+                    android:hint="(e.g: 1200)"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lyt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="#666666"
+                    android:src="@drawable/ic_chevron_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="back"
+                    android:textSize="18dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="#666666"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/lyt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:textSize="18dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="#666666"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
