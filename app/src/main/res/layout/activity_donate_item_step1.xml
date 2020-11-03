@@ -8,17 +8,9 @@
     android:background="@drawable/bg"
     tools:context=".Activities.Donor.DonateItemStep1Activity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:id="@+id/toolbarProfile"
-        android:elevation="1dp"
-        app:title="Share Item"
-        app:titleTextColor="@color/colorWhite"
-        android:background="@color/colorPrimaryDark"
-        android:theme="@style/AppTheme.BottomAppbar"
-        android:layout_height="?attr/actionBarSize">
-
-    </androidx.appcompat.widget.Toolbar>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
     <RelativeLayout
         android:layout_width="match_parent"
